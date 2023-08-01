@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class App {
+    
     private static final String PASSWORD = "";
     private static final String USERNAME = "gitpod";
     private static final String JDBC_URL = "jdbc:postgresql://localhost/postgres";
