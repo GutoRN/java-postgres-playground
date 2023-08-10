@@ -46,5 +46,11 @@ public class Cliente{
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente [Nome=" + nome + ", Renda=" + renda + ", Sexo =" + sexo + ", Ano de Nascimento=" + anoNascimento
+                + "]";
+    }
     
 }
