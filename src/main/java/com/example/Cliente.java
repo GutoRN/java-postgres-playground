@@ -49,7 +49,7 @@ public class Cliente{
 
     @Override
     public String toString() {
-        return "Cliente [Nome=" + nome + ", Renda=" + renda + ", Sexo =" + sexo + ", Ano de Nascimento=" + anoNascimento
+        return " [Nome=" + nome + ", Renda=" + renda + ", Sexo =" + sexo + ", Ano de Nascimento=" + anoNascimento
                 + "]";
     }
     
