@@ -93,7 +93,7 @@ public class App {
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
-            System.err.println("Não foi possível carregar a biblioteca para acesso ao banco de dados: " + e.getMessage());
+            System.err.println("Não foi possível carregar a bibli para acesso ao banco de dados: " + e.getMessage());
         }
     }
 }
