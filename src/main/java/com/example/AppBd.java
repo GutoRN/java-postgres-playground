@@ -1,9 +1,8 @@
 package com.example;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
+
 
 import com.example.dao.ConnectionManager;
 import com.example.dao.DAO;
@@ -24,6 +23,12 @@ public class AppBd {
         try(var conn = ConnectionManager.getConnection() ) {
           //  carregarDriverJDBC();
             var estadoDAO = new EstadoDAO(conn);
+            var listaEstados = estadoDAO.listar();
+            for (var estado : listaEstados) {
+                System.out.println(estado);
+                
+            }
+
             estadoDAO.listar();
             estadoDAO.localizarEstado("PR");
                     
@@ -42,7 +47,7 @@ public class AppBd {
             produtoDAO.excluir(207L);
             
             var dao = new DAO(conn);
-            dao.listar("produto");
+         //   dao.listar("produto");
 
 
           
@@ -51,16 +56,7 @@ public class AppBd {
             System.err.println("Não foi possivel conectar ao banco de dados" + e.getMessage());                 
         }        
     }
-
-  
-
-  
-
-  
-
-    
-
-    
+   
     private void carregarDriverJDBC() {
         try {
             Class.forName("org.postgresql.Driver");         

@@ -43,6 +43,10 @@ public class Estado {
     }
     public void setPopulacao(int populacao) {
         this.populacao = populacao;
+    }
+    @Override
+    public String toString() {
+        return "Estado [id=" + id + ", nome=" + nome + ", uf=" + uf + "]";
     };
 
     
