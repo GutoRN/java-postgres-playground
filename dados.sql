@@ -2,7 +2,14 @@
 -- Adaptado de https://www.ricardoarrigoni.com.br/cidades-brasil-lista-de-cidades-brasileiras-em-sql/
 -- Área por estado: https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_área
 -- População por estado (prévio censo 2022): https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_população
-
+drop TABLE if exists aluno;
+CREATE TABLE aluno(
+    matricula serial NOT NULL PRIMARY KEY,
+    nome VARCHAR(120) not NULL,
+    nota1 DECIMAL(4,2) NOT null DEFAULT 0,
+    nota2 DECIMAL(4,2) NOT null DEFAULT 0,
+    nota3 DECIMAL(4,2) NOT null DEFAULT 0
+);
 drop table if exists item_venda;
 drop table if exists venda;
 
